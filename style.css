@@ -1,0 +1,501 @@
+/* Define o estilo global do corpo do site */
+body {
+    background-color: #fcfcfc; /* Define a cor de fundo do corpo */
+    min-width: 403px; /* Define a largura mínima do corpo */
+    width: 100%; /* Define a largura completa para o corpo */
+    margin: 0; /* Remove a margem padrão do corpo */
+    padding: 0; /* Remove o preenchimento padrão do corpo */
+    -webkit-box-sizing: border-box; /* Define box-sizing para incluir bordas e preenchimento no cálculo do tamanho do elemento no Safari/Chrome */
+    -moz-box-sizing: border-box; /* Define box-sizing para incluir bordas e preenchimento no cálculo do tamanho do elemento no Firefox */
+    box-sizing: border-box; /* Define box-sizing para incluir bordas e preenchimento no cálculo do tamanho do elemento */
+    text-decoration: none; /* Remove qualquer sublinhado ou decoração de texto */
+    font-family: 'Bebas Neue', cursive; /* Define a fonte padrão do corpo */
+    overflow-x: hidden; /* Oculta a rolagem horizontal */
+}
+
+/* Adiciona uma margem superior genérica */
+.mt {
+    margin-top: 60px; /* Define uma margem superior de 60px */
+}
+
+/* Define o estilo para a barra de navegação fixa */
+#navbar {
+    position: sticky; /* Fixa o elemento na parte superior ao rolar */
+    top: 0; /* Posiciona o elemento no topo */
+    left: 0; /* Define o início no lado esquerdo */
+    right: 0; /* Estende até o lado direito */
+    z-index: 99; /* Define a prioridade de sobreposição do elemento */
+    width: 100%; /* Define largura total */
+}
+
+/* Remove o estilo de lista padrão e ajusta os itens */
+ul li {
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 20px; /* Adiciona preenchimento interno aos itens */
+    font-size: 24px; /* Define o tamanho da fonte */
+    font-weight: 300; /* Define o peso da fonte */
+}
+
+/* Define o estilo do elemento de navegação principal */
+nav {
+    display: flex; /* Usa um layout flexível */
+    justify-content: space-between; /* Espaça os elementos igualmente entre si */
+    padding: 0 3%; /* Adiciona espaçamento horizontal */
+    background-color: #f9be9b; /* Define a cor de fundo */
+}
+
+/* Posiciona imagens específicas na barra de navegação */
+.img-v {
+    position: relative; /* Define um posicionamento relativo */
+    right: 20%; /* Move o elemento 20% para a direita */
+    top: 7%; /* Move o elemento 7% para baixo */
+}
+
+/* Define a lista de navegação como flexível */
+.nav-list ul {
+    display: flex; /* Usa um layout flexível para os itens da lista */
+    cursor: pointer; /* Adiciona um cursor de ponteiro ao passar o mouse */
+}
+
+/* Define botões na barra de navegação */
+.button-nav {
+    font-size: 16px; /* Define o tamanho da fonte */
+    font-weight: 400; /* Define o peso da fonte */
+    padding: 20px; /* Adiciona preenchimento interno */
+}
+
+/* Ajusta o estilo dos botões */
+.button-nav button {
+    background-color: transparent; /* Define um fundo transparente */
+    padding: 7px 15px; /* Adiciona preenchimento interno */
+    border-radius: 10px; /* Arredonda os cantos do botão */
+}
+
+/* Define o estilo do logotipo na navegação */
+.logo {
+    padding: 20px; /* Adiciona preenchimento interno */
+}
+
+/* Esconde o menu "hambúrguer" por padrão */
+.hamburger {
+    display: none; /* Não exibe o menu hambúrguer */
+    cursor: pointer; /* Adiciona cursor de ponteiro */
+}
+
+/* Define barras no menu hambúrguer */
+.bar {
+    display: block; /* Define o elemento como um bloco */
+    width: 25px; /* Define a largura */
+    height: 3px; /* Define a altura */
+    margin: 5px auto; /* Adiciona espaçamento entre as barras */
+    transition: all 0.3s ease-in-out; /* Adiciona transição para animações */
+    background-color: #fff; /* Define a cor de fundo das barras */
+}
+
+/* Estiliza spans usadas em combinações */
+.span {
+    display: flex; /* Usa um layout flexível */
+    gap: 10px; /* Adiciona um espaçamento entre os itens */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+}
+
+/* Ajusta a navegação para dispositivos menores */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Exibe o menu hambúrguer em telas pequenas */
+        padding: 20px; /* Adiciona preenchimento interno */
+    }
+    .hamburger.active .bar:nth-child(3) {
+        opacity: 0; /* Esconde a terceira barra ao ativar */
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translate(-8px) rotate(44deg); /* Rotaciona a primeira barra */
+        position: relative; /* Posiciona a barra de forma relativa */
+        top: 22%; /* Ajusta a posição vertical */
+    }
+    .hamburger.active .bar:nth-child(2) {
+        transform: translate(-8px) rotate(-45deg); /* Rotaciona a segunda barra */
+    }
+    .nav-menu {
+        position: fixed; /* Define o menu como fixo */
+        left: -100%; /* Oculta o menu fora da tela */
+        top: 70px; /* Define a altura inicial */
+        gap: 0; /* Remove o espaçamento */
+        flex-direction: column; /* Organiza os itens verticalmente */
+        background-color: #f9be9b; /* Define a cor de fundo */
+        width: 100%; /* Define a largura total */
+        text-align: center; /* Centraliza o texto */
+        transition: 0.7s; /* Adiciona uma transição suave */
+    }
+    .nav-menu li {
+        margin: 16px 0; /* Adiciona margens entre os itens */
+    }
+    .nav-menu.active {
+        left: 0; /* Exibe o menu ao ativar */
+    }
+    .button-nav {
+        margin-top: 3%; /* Adiciona margem superior */
+    }
+}
+
+/* section1 */
+
+.s1-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 13% 2%;
+    
+}
+
+.s1-text h2 {
+    font-size: 48px;
+    font-weight: 700;
+    
+}
+
+.s1-text p {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.s1-content {
+    display: flex;
+}
+
+#section-1 {
+    background-color: #f9be9b;
+}
+
+.s1-input button {
+    width: 154px;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background-color: #e79464;
+    color: #070606;
+    outline: none;
+}
+
+.s1-input input {
+    width: 472px;
+    height: 40px;
+    border: none;
+    outline: none;
+}
+
+.s1-input {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .s1-content {
+        flex-direction: column-reverse;
+    }
+    .s1-image {
+        width: 98% !important;
+        display: flex;
+        justify-content: center;
+    }
+    .s1-image img {
+        width: 350px;
+    }
+    .s1-text {
+        text-align: center;
+    }
+}
+
+.s1-image {
+    background-color: #e79464;
+    width: 100%;
+    margin: 6% 2%;
+    animation: draw-in-out 2s ease-in forwards 1 alternate;
+}
+
+@keyframes draw-in-out {
+    0% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 0;
+    }
+    66% {
+        opacity: 1;
+        transform: scale(1.1);
+        transition-duration: 4s;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* section2 */
+
+#section-2 {
+    text-align: center;
+    background-color: #FBF0E4;
+    padding: 35px 0;
+}
+
+#section-2 .s2-icons {
+    font-size: 67px;
+}
+
+.s2-icons i {
+    margin: 0 35px;
+}
+
+@media (max-width: 768px) {
+    #section-2 .s2-icons {
+        font-size: 34px;
+    }
+}
+
+
+/* section3 */
+
+.s3-h3 {
+    text-align: center;
+    font-weight: 500px;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.hr {
+    margin-left: 44%;
+    margin-right: 44%;
+}
+
+.s3-content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    padding: 0 2%;
+}
+
+.s3-h2 h2 {
+    font-size: 36px;
+    font-weight: 700;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.s3-p p {
+    width: 647px;
+    height: 116px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #625548;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-left: 5%;
+}
+
+@media (max-width: 768px) {
+    .s3-content {
+        flex-direction: column;
+    }
+    .s3-h2 {
+        text-align: center;
+    }
+    .s3-p p {
+        width: fit-content;
+        margin-top: 4%;
+        letter-spacing: 1px;
+    }
+}
+
+/* section4 */
+
+#section-4 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.s4-fe {
+    background-image: url("assets/Rectangle 2.png");
+}
+
+.s4-te {
+    background-image: url("assets/Rectangle 3.png");
+}
+
+.s4-the {
+    background-image: url("assets/Rectangle 4.png");
+}
+
+.s4-img {
+    width: 340px;
+    height: 486px;
+    background-size: cover;
+    color: #fff;
+    display: grid;
+    row-gap: 80%;
+    padding: 2% 6px;
+    border-radius: 8px;
+}
+
+.s4-h2 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: -20px;
+}
+
+.s4-2h2 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    #section-4 {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .s4-img {
+        padding: 4% 6px;
+        margin: 4%;
+        width: 355px;
+       
+    }
+}
+
+/* section5 */
+
+.s5-context {
+    text-align: center;
+    background-color: #F9F9F9;
+    padding: 2% 0;
+}
+
+.s5-img img {
+    width: 5%;
+    margin: 2% 1%;
+}
+
+.s5-h2 h2 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.s5-h2 p {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .s5-h2 p {
+        font-size: 20px;
+        padding: 0 3%;
+        line-height: 27px;
+    }
+    .s5-img img {
+        width: 14%;
+    }
+}
+
+/* footer */
+
+.output {
+    width: 140px;
+    height: 140px;
+    background: linear-gradient(180deg, #FF7878 0%, #F7CFA3 100%);
+}
+
+.output-2 {
+    position: relative;
+    margin-top: -14%;
+    margin-left: 17%;
+}
+
+.output-3 {
+    position: relative;
+    margin-top: -12%;
+    margin-left: 32%;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 4%;
+}
+
+.footer-s2 {
+    text-align: center;
+    margin-top: 4%;
+}
+
+.footer-s3 {
+    text-align: center;
+}
+
+.footer-btn {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #FF7878 0%, #F7CFA3 100%);
+    color: #fff;
+}
+
+.slack {
+    display: flex;
+    margin-left: 18%;
+}
+
+.slack h2 {
+    margin-left: 2%;
+}
+
+.slack-context {
+    margin-top: 4%;
+}
+
+svg {
+    margin: 2% 4%;
+    width: 8%;
+}
+
+.svg {
+    margin-top: 9%;
+}
+
+.footer-btn:hover {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #FFA542;
+}
+
+@media (max-width: 768px) {
+    .output {
+        width: 100px;
+        height: 100px;
+    }
+    .footer-s2 {
+        margin-top: 11% !important;
+    }
+    .footer-s3 {
+        margin-top: 11% !important;
+    }
+    .slack {
+        margin-left: 31%;
+    }
+}
+
+/* javascript */
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+
+.animate {
+    transform: translateY(0px);
+    opacity: 1;
+}
